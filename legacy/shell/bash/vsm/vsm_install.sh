@@ -156,7 +156,7 @@ EOF
 
 sudo ln -fs $HOME/vsm_cron.sh /etc/cron.daily/vsm_cron.sh
 
-wget -O $HOME/vsm_update.sh https://raw.githubusercontent.com/virtualex-itv/itv-lib/master/shell/bash/vsm/vsm_update.sh && chmod +x $HOME/vsm_update.sh
+wget -O $HOME/vsm_update.sh https://raw.githubusercontent.com/virtualex-itv/itv-scripts/master/legacy/shell/bash/vsm/vsm_update.sh && chmod +x $HOME/vsm_update.sh
 
 ( crontab -l; echo "0 6 * * * /usr/local/bin/vsm.sh -y -mr --favorite -c" ) | sort - | uniq - | crontab -
 
